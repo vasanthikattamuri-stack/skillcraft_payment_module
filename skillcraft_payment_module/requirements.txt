@@ -1,0 +1,22 @@
+# ---------------------------------------------------------------------------
+# SkillCraft.AI - Razorpay Payment Module
+# ---------------------------------------------------------------------------
+# Core framework
+Django>=4.2,<6.0
+djangorestframework>=3.15,<4.0
+
+# Razorpay official Python SDK (pinned to the version required by the task)
+razorpay==2.0.1
+
+# Environment variables (.env file loading)
+python-dotenv>=1.0,<2.0
+
+# JWT authentication - used ONLY by the standalone demo project (config/).
+# The reusable `payments` app does not import it; it uses whatever
+# authentication the main project configures for Django REST Framework.
+djangorestframework-simplejwt>=5.3,<6.0
+
+# PostgreSQL driver - only needed when POSTGRES_DB is set in .env.
+# SQLite (built into Python) is used by default for local demo & tests.
+# Uncomment the next line if you want to run against PostgreSQL.
+# psycopg[binary]>=3.1,<4.0
